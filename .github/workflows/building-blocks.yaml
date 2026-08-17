@@ -14,7 +14,6 @@ jobs :
             - name: Failed step
               run: |  #this pipe sign is used for adding multiple commands
                   echo "This step will fail"
-                  exit 1
             - name: Say GoodBye
               run: echo "GoodBye, World!"
                   
