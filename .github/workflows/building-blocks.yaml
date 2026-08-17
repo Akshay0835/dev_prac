@@ -1,0 +1,21 @@
+name : Building Blocks
+
+on: push
+
+jobs :
+    echo-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Say Hello
+              run: echo "Hello, World!"
+    echo-goodbye:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Failed step
+              run: |  #this pipe sign is used for adding multiple commands
+                  echo "This step will fail"
+                  exit 1
+            - name: Say GoodBye
+              run: echo "GoodBye, World!"
+                  
+            
