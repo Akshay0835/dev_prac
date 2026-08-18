@@ -1,0 +1,16 @@
+name: Senario1
+
+on:
+    pull_request:
+        
+
+jobs:
+    checks:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print PR Details
+              run: |
+                  echo "Target branch: ${{github.base_ref}}"
+                  echo "PR Number: ${{github.event.pull_request.number}}"
+                  echo "Gatekeeper checks complete"
+    

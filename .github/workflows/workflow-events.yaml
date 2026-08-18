@@ -1,10 +1,10 @@
 name: Workflow Events
 
-on:
-    push: #when we push on branch 
-    pull_request: #when we merge on branch with other branch 
-    schedule: #when we want to run workflow after specific time interval
-        - cron: '*/5 * * * *' #runs every 5 min
+on: 
+    # push: #when we push on branch 
+    # pull_request: #when we merge on branch with other branch 
+    # schedule: #when we want to run workflow after specific time interval
+    #     - cron: '*/5 * * * *' #runs every 5 min
     workflow_dispatch: #when we want to run workflow manually
 
 jobs:
