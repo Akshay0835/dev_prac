@@ -1,0 +1,28 @@
+name: prac1
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Print Python and Pip versions
+        run: |
+          python --version
+          pip --version
+
+      - name: Print Python binary location
+        run: which python
+
+      - name: Finish inspection
+        run: echo "Inspection complete"
