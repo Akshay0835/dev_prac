@@ -1,0 +1,32 @@
+name: Checkout Proof
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print folder path and list contents (Before Checkout)
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Contents before checkout:"
+          ls -la
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: List contents (After Checkout)
+        run: |
+          echo "Contents after checkout:"
+          ls -la
+
+      - name: Count files present
+        run: |
+          echo "Total file count in workspace:"
+          find . -type f | wc -l
+
+      - name: Finish proof
+        run: echo "Proof captured"
