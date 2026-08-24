@@ -1,7 +1,6 @@
 name: Checkout Proof
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:
