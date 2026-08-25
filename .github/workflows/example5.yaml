@@ -8,8 +8,6 @@ run-name: >-
       || format('Automatic {0} by {1}', github.event_name, github.actor) }}
 
 on:
-  push:
-  pull_request:
   workflow_dispatch:
     inputs:
       severity:
