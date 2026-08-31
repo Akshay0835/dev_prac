@@ -1,8 +1,7 @@
 name: Senario1
 
 on:
-    pull_request:
-        
+    workflow_dispatch: 
 
 jobs:
     checks:
